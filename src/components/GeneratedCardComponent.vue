@@ -1,61 +1,34 @@
 <template>
-<keep-alive>
-<div>
-        <div class="section-container">
-            <div class="card-container">
-                
-           
-            <div class="academic-year">
-              {{formData.academicYear}}
-            </div>
-            <div class="card-name">
-             {{formData.firstName}} {{formData.lastName}}
-            </div>
-            <div class="department-name">
-             Dept of {{formData.department}}
-            </div>
-           
-          </div>
-           
-           <!-- <img alt="Vue logo" src="./assets/image.jpg"> -->
-    <!-- <component v-bind:is="component" /> -->
-    <!-- <UserInputElements v-bind:img = "img" width="200" /> -->
-     <!-- <div>
-      <div>
-        <input v-model="img"/>
+  <div>
+    <div class="section-container">
+      <div class="card-container">
+        <div class="card-input card-name">
+          {{ formData.firstName }} {{ formData.lastName }}
+        </div>
+        <div class="card-input academic-year">
+          {{ formData.academicYear }}
+        </div>
+        <div class="card-input department-name">
+          Dept of {{ formData.department }}
+        </div>  
       </div>
-      <UserInputElements v-bind:img="img"></UserInputElements>
-    </div> -->
-      <!-- <div class = "form-label">Upload Profile Picture</div><br> -->
-                 <!-- <img v-bind:src="require('../assets/' + img)" width="200" /> -->
-  <!-- `<div class="user-card"> -->
-     <!-- <UserInputElements :image-url="require('~/assets/image.jpg')" /> -->
-    <!-- <UserInputElements {{item.name}}/> -->
-    <!-- <section>{{item.name}}</section> -->
-             <!-- </div> -->
-        <!--    </div> -->
-      </div>
-      
-      </div>
-      </keep-alive>
+    </div>
+    <div class="circleBase circle2" style="cursor: pointer;" width="120px">
+      <img :src="image" class="circleBase circle1" width="120px" />
+    </div>
+  </div>
 </template>
 <script>
-// import UserInputElements from'./components/UserInputElements';
 export default {
-       name:"GeneratedIDCard",
-       components:{
-        //  UserInputElements
-       },
-       data(){
-        return{
-      //  img: "image.jpg"
-          }
-    },
-  
-       props:{
-          // img:Object,
-           formData:Object,
-           
-       }
+  name: "GeneratedIDCard",
+  components: {},
+  data() {
+    return {};
+  },
+
+  props: {
+    formData: Object,
+    image: String,
+  },
 };
 </script>
